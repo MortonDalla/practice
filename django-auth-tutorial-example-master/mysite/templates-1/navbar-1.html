@@ -1,0 +1,76 @@
+{% load staticfiles %}
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href='{% static "css/bootstrap.min-2.css" %}' />
+<link rel="stylesheet" href='{% static "css/font-awesome-2.css" %}' />
+<link rel="stylesheet" href='{% static "css/templatemo_main.css" %}' />
+
+<link rel="stylesheet" href='{% static "css/bootstrap.min-2.css" %}' />
+<link rel="stylesheet" href='{% static "css/font-awesome-2.css" %}' />
+<link rel="stylesheet" href='{% static "css/animate.css" %}' />
+<link rel="stylesheet" href='{% static "css/templatemo_misc.css" %}' />
+<link rel="stylesheet" href='{% static "css/templatemo_style.css" %}' />
+<link rel="stylesheet" href='{% static "css/owl-carousel.css" %}' />
+
+<script src="{% static 'js/vendor/modernizr-2.6.1-respond-1.1.0.min.js' %}"></script>
+	
+<div class="site-main" id="sTop">
+<div class="site-header">
+	<div class="main-header">
+		<div class="container">
+			<div id="menu-wrapper">
+				<div class="row">
+					<nav class="navbar navbar-inverse" role="navigation">
+						<div class="navbar-header">
+							<button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+							{% url 'home' as home %}
+						    {% url 'contacts' as contacts %}
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							
+							<a href="{% url 'home' %}" class="navbar-brand">Learners Portal</a>
+							<div id="main-nav" class="collapse navbar-collapse">
+								<ul class="menu-first nav navbar-nav" style="margin-right: 20px;">
+									<li {% if request.path == home %} class="active" {% endif %}><a href="{% url 'home' %}">Home</a></li>
+									<li><a href="#admissions">admissions</a></li>
+									<li><a href="#subjects">subjects</a></li>
+									<li><a href="#Calender">Calender</a></li>
+									<li><a href="https://www.google.com" class="external">External</a></li> 
+									<li {% if request.path == contacts %} class="active" {% endif %}><a href="{% url 'contacts' %}">Contacts</a></li>                                 
+								</ul>                                    
+							</div> <!-- /.main-menu -->
+						</div>
+					</nav>
+				</div> <!-- /.row -->
+			</div> <!-- /#menu-wrapper -->                        
+		</div> <!-- /.container -->
+	</div> <!-- /.main-header -->
+</div> <!-- /.site-header -->
+</div> <!-- /.site-main -->
+
+<script src="{% static 'js-2/templatemo_script.js' %}"></script>
+
+ <script  src="{% static 'js-2/vendor/jquery-1.11.0.min.js' %}"></script>
+ <script>window.jQuery || document.write('src="{% static 'js/vendor/jquery-1.11.0.min.js' %}"><\/script>')</script>
+<script src="{% static 'js-2/bootstrap.js' %}"></script>
+<script src="{% static 'js-2/plugins.js' %}"></script>
+<script src="{% static 'js-2/main.js' %}"></script>
+
+<!-- Google Map -->
+<script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="{% static 'js-2/vendor/jquery.gmap3.min.js' %}"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+	// mobile nav toggle
+	$('#nav-toggle').on('click', function (event) {
+		event.preventDefault();
+		$('#main-nav').toggleClass("open");
+	});
+});
+</script>

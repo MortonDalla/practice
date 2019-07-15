@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Homepage</h2>
+  <p>Welcome to My Site, {% if user.is_authenticated %}{{ user.username }}{% else %}visitor{% endif %}!</p>
+  <p>
+    <strong>Total users registered: </strong> {{ count }}
+	  
+	  
+	  
+	  <div id="main-wrapper">
+	<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center templatemo-logo margin-top-20">
+		<h1 class="templatemo-site-title">
+			<a href="{% url 'home' %}">Learners Portal</a>
+		</h1>
+	</div>
+	{% load staticfiles %}
+	<div class="image-section">
+		<div class="image-container">
+			<img src='{% static "images/zoom-bg-10.jpg" %}' id="menu-img" class="main-img inactive" alt="Zoom HTML5 Template by templatemo.com">
+			<img src='{% static "images/zoom-bg-222.jpg" %}' id="portal-img" class="inactive" alt="portal">
+			<img src='{% static "images/zoom-bg-333.jpg" %}' id="learn-img"  class="inactive" alt="learn">
+			<img src='{% static "images/zoom-bg-444.jpg" %}' id="hub-img" class="inactive" alt="hub">
+			<img src='{% static "images/zoom-bg-10.jpg" %}' id="siteconnect-img" class="inactive" alt="siteconnect">
+			<img src='{% static "images/zoom-bg-111.jpg" %}' id="Sports-img" class="main-img inactive" alt="Sports">
+			<img src='{% static "images/zoom-bg-555.jpg" %}' id="Library-img" class="main-img inactive" alt="Library">
+			<img src='{% static "images/zoom-bg-1.jpg" %}' id="careers-img"  class="inactive" alt="careers">
+			<img src='{% static "images/zoom-bg-2.jpg" %}' id="contacts-img" class="inactive" alt="contacts">
+
+		</div>
+	</div>
+
+
+	{% include 'dev_container.html' %}
+
+
+
+
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer">
+				<p class="footer-text">Copyright &copy; 2084 M & M RENEWAL</p>
+			</div><!-- /.footer --> 
+		</div>
+
+	</div><!-- /#main-wrapper -->
+
+	<div id="preloader">
+		<div id="status">&nbsp;</div>
+	</div><!-- /#preloader -->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-12">
+						<p>Copyright &copy; 2019 M & M RENEWAL <br>Designed and created: M & M RENEWAL</p>
+				<div class="col-md-4 col-sm-12">
+					<ul class="social-icons">
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Linkedin</a></li>
+						<li><a href="#">Instagram</a></li>
+					</ul>
+				</div>
+				</div>	
+			</div>
+		</div>
+	</footer>		
+
+  </p>
+
+
+
+
+
+
+
+{% endblock %}

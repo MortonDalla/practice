@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
+
+	<div class="jumbotron text-center">
+	  <hr class="my-4">
+	  <h2><span class="label label-success">welcome {{ user.username }}!</span></h2>
+	  	<p>ABC STUDENT PORTAL</p> 
+	  <p class="lead">
+		<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+	  </p>
+	</div>
+	  
+	</div>
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
+	<a href="{% url 'registration_register' %}">
+	<div class="container">
+
+		<h1 class="text-center">my portals </h1>
+
+
+		<div class="container">
+			<div class="row">
+				<!--team-1-->
+				<div class="col-lg-4">
+				<div class="our-team-main">
+
+				<div class="team-front">
+					<a href="default.asp"><img src="http://placehold.it/110x110/9c27b0/fff?text=VC Connect" class="img-fluid" /></a>
+					<a href="default.asp"><h3>VC Connect</h3></a>
+				</div>
+
+				<div class="team-back">
+				<span>
+				</span>
+				</div>
+
+				</div>
+				</div>
+				<!--team-1-->
+
+				<!--team-2-->
+				<div class="col-lg-4">
+				<div class="our-team-main">
+
+				<div class="team-front">
+					<a href="default.asp"><img src="http://placehold.it/110x110/336699/fff?text=Carreer Centre" class="img-fluid" /></a>
+					<a href="default.asp"><h3>Carreer Centre</h3></a>
+				</div>
+
+				<div class="team-back">
+				<span>
+				</span>
+				</div>
+
+				</div>
+				</div>
+				<!--team-2-->
+
+				<!--team-3-->
+				<div class="col-lg-4">
+				<div class="our-team-main">
+
+				<div class="team-front">
+					<a href="default.asp"><img src="http://placehold.it/110x110/607d8b/fff?text=Library" class="img-fluid" /></a>
+					<a href="default.asp"><h3>Library</h3></a>
+				</div>
+
+				<div class="team-back">
+				<span>
+				</span>
+				</div>
+
+				</div>
+				</div>
+				<!--team-3-->
+
+				<!--team-4-->
+				<div class="col-lg-4">
+				<div class="our-team-main">
+
+				<div class="team-front">
+					<a href="{% url 'login' %}"><img src="http://placehold.it/110x110/4caf50/fff?text=VC portal" class="img-fluid" /></a>
+					<a href="{% url 'login' %}"><h3>VC portal</h3></a>
+				</div>
+
+				<div class="team-back">
+				<span>
+				</span>
+				</div>
+
+				</div>
+				</div>
+				<!--team-4-->
+
+				<!--team-5-->
+				<div class="col-lg-4">
+				<div class="our-team-main">
+
+				<div class="team-front">
+					<a href="default.asp"><img src="http://placehold.it/110x110/e91e63/fff?text=Learners Hub" class="img-fluid" /></a>
+					<a href="default.asp"><h3>Learners Hub</h3></a>
+				</div>
+
+				<div class="team-back">
+				<span>
+				</span>
+				</div>
+
+				</div>
+				</div>
+				<!--team-5-->
+
+				<!--team-6-->
+				<div class="col-lg-4">
+				<div class="our-team-main">
+
+				<div class="team-front">
+					<a href="default.asp"><img src="http://placehold.it/110x110/2196f3/fff?text=CV Learn" class="img-fluid" /></a>
+					<a href="default.asp"><h3>CV Learn</h3></a>
+				</div>
+
+				<div class="team-back">
+				<span>
+				</span>
+				</div>
+				</div>
+				</div>
+				<!--team-6-->
+				
+				<p>hello</p>
+				<a href="{% url 'registration_register' %}">
+
+			</div>
+		</div>
+		<div class="jumbotron text-center">
+	    <h2><span class="label label-success">welcome {{ user.username }}!</span></h2>
+	    <p>ABC STUDENT PORTAL</p> 
+	    </div>
+	</div>
+  
+ <h2><p style="text-align:center"><a href="{% url 'logout' %}">logout</a></p></h2>
+
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a> |
+  <a href="{% url 'signup' %}">signup</a>
+
+
+{% endif %}
+{% endblock %}
+
+
+
+
